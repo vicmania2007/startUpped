@@ -1,8 +1,28 @@
 "use strict";
 
 var React = require('react');
+var firebase = require('../third-party/Firebase');
 
 var Login = React.createClass({
+   onLoginClick: function() {
+    alert('Hi');
+    var email = 'vsubramanian90@gmail.com';
+    var password = 'vickie123';
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(function(user) {
+      console.log(user);
+    })
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      if (errorCode === 'auth/wrong-password') {
+        alert('Wrong password.');
+      } else {
+        alert(errorMessage);
+      }
+    });
+   },
    render: function() {
         return (
               <div id="login-page" class="row">
@@ -36,7 +56,7 @@ var Login = React.createClass({
                     </div>
                     <div class="row">
                       <div class="input-field col s12">
-                        <a href="login.html" class="btn waves-effect waves-light col s12">Login</a>
+                        <a onClick={this.onLoginClick} class="btn waves-effect waves-light col s12">Login</a>
                       </div>
                     </div>
                     <div class="row">
@@ -56,4 +76,3 @@ var Login = React.createClass({
 });
 
 module.exports = Login;
-// <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
