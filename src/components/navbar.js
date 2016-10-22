@@ -7,20 +7,27 @@ var Link = Router.Link;
 var Navbar = React.createClass({
    render: function() {
         return (
-
-            <div id="navbar">
-                <nav className="nav-wrp nav-3 navigation_style">
-                    <div className="container">
-                        <div className="nav-header">
-                            <a href=""><img className="logoimg" src="images/logo.png" alt="Brand logo" /></a>
-                            <a className="nav-handle fs-touch-element" data-nav=".nav"><i className="fa fa-bars"></i></a>
-                        </div>
-                        <div className="nav vm-item">
-                            <div className="nav-other">
-                                <Link to="login" className="btn btn-default btn-sm login_style robofont">Login</Link>
-                                <Link to="register" className="btn btn-default btn-sm signup_style robofont"><i className="fa fa-sign-in"></i>Sign Up</Link>
-                            </div>
-                        </div>
+            <div className="navbar">
+                <nav>
+                    <div className="nav-wrapper">
+                        <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
+                        <ul className="right hide-on-med-and-down">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">FEATURES</a></li>
+                            <li><a href="#">SUBSCRIBE</a></li>
+                            <li><Link className="modal-trigger" to="register">SIGN UP</Link></li>
+                            <li><Link className="modal-trigger" to="login">LOGIN</Link></li>
+                        </ul>
+                        <ul className="side-nav" id="mobile-demo">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">FEATURES</a></li>
+                            <li><a href="#">SUBSCRIBE</a></li>
+                            <li><a href="#">SIGN UP</a></li>
+                            <li><a href="#">LOGIN</a></li>
+                            <li><a href="#"><i className="material-icons">keyboard_return</i></a></li>
+                        </ul>
                     </div>
                 </nav>
             </div>

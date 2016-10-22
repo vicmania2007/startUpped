@@ -1,0 +1,210 @@
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+/* Custom CSS for landing page */
+body{
+    background-color: #EEEEEE;
+}
+.main-color{
+    color:#F2194E;
+}
+.new-section{
+    margin-top: 50px;
+    text-align: center;
+}
+/* Commonly used styles */
+.startupped-btn{
+    background-color: #F2194E;
+}
+.startupped-btn:hover{
+    background-color: #F2194E;
+}
+.startupped-btn-light{
+    font-size: 20px;
+    background-color: #FFFFFF;
+    color: #F2194E;
+}
+.startupped-btn-light:hover{
+    background-color: #FFFFFF;
+    color: #F2194E;
+}
+/* Horizontal Rule */
+hr {
+    margin: 0 0 60px 0;
+    position: relative;
+    border: 0;
+}
+hr.daga {
+    height: 2px;
+    background: #F2194E;
+}
+/* Preloader style */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../images/preloader.gif) center no-repeat #fff;
+}
+/* Primary menu and logo styling */
+.navbar{
+    width: 100.6% !important;
+}
+nav {
+    color: #fff;
+    background-color: #ED005A;
+    width: 100%;
+    height: 65px;
+}
+.side-nav{
+    background-color: #BDBDBD;
+}
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    float: right !important;
+    margin-right: 10px;
+}
+.mob-primary-nav{
+    margin: 10px;
+    text-align: center;
+}
+nav .brand-logo{
+    max-width: 150px;
+}
+/* Hero Header */
+.jumbotron-container {
+    background-image: url(../images/heroimg2.jpg);
+    background-position: top;
+    background-position-x: center;
+    background-position-y: top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.hero-section-left{
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.hero-section-right{
+    margin-top: 70px;
+    margin-bottom: 80px;
+}
+img.hero-startup-img {
+    width: 450px;
+}
+.hero-heading{
+    color:#FFFFFF;
+    font-size: 70px;
+    font-weight: 600;
+}
+.hero-content{
+    color: #FFFFFF;
+    font-size: 29px;
+    margin-top:-50px;
+    font-weight: 600;
+}
+/* About Us */
+.list-heading{
+    font-size: 20px;
+    font-weight: 500;
+    color:#ED005A;
+}
+.list-desc{
+    font-size: 17px;
+}
+/* Features */
+.feature-img{
+    margin-top: 30px;
+}
+.feature-heading{
+    text-align: left !important;
+    font-size: 35px;
+    font-weight: 500;
+}
+.feature-content{
+    text-align: left !important;
+    font-size: 20px;
+}
+/* Try */
+.try-sec{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    background-color: #424242;
+}
+.try-heading{
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 500;
+}
+.try-content{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+}
+.try-sec-b {
+    color: #4FC3F7;
+}
+/* Subscribe */
+.subscribe-sec{
+    padding-top: 40px;
+}
+.subscribe-container .input-field label {
+    color: #F2194E;;
+}
+.subscribe-heading{
+    font-size: 20px;
+    color: #F2194E;
+}
+.subscribe-content{
+    font-size: 20px;
+}
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{
+    border-bottom: 2px solid #F2194E !important;
+}
+.sub-btn{
+    margin-top: 15px;
+}
+/* Footer */
+.footer-sec{
+    text-align: center;
+    padding-top: 10px;
+}
+.copy-text1{
+    font-size: 18px;
+}
+.copy-text2 a{
+    color:#F2194E !important;
+}
+/* Modal Forms */
+.modal-footer-links{
+    float: right;
+    margin-top: 15px;
+}
+.registerform h4, .loginform h4{
+    font-size: 35px;
+    text-align: center;
+    color: #F2194E;
+    font-weight: 500;
+}
+.registerform h6, .loginform h6 {
+    text-align: center;
+}
+.modal-btn{
+    background-color: #F2194E;
+    float: right;
+    margin-top: -5px;
+}
+.modal-btn:hover{
+    background-color: #F2194E;
+}
+/* 1. Register Form */
+div#register-modal {
+    opacity: 0.96 !important;
+    width: 45%;
+}
+/* 2. Login Form */
+div#login-modal {
+    opacity: 0.96 !important;
+    width: 35%;
+}

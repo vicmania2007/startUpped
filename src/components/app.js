@@ -14,7 +14,7 @@ var App = React.createClass({
 		return (
 			<div>
 				<Navbar />
-				<div className="container-fluid">
+				<div>
 					<RouteHandler />
 				</div>
 				<Footer />

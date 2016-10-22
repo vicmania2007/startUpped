@@ -23,7 +23,8 @@ var config = {
     	images: [
     		'./src/images/*.jpg',
     		'./src/images/*.png',
-    		'./src/images/*.ico'
+    		'./src/images/*.ico',
+    		'./src/images/*.gif'
 		],
 		dist: './dist',
 		mainJs: './src/main.js'
