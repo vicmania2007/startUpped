@@ -1,6 +1,7 @@
 "use strict";
 
 var gulp = require('gulp');
+var history = require('connect-history-api-fallback');
 var connect = require('gulp-connect'); //Runs a local dev server
 var open = require('gulp-open'); //Open a URL in a web browser
 var browserify = require('browserify'); // Bundles JS
@@ -37,7 +38,12 @@ gulp.task('connect', function() {
 		root: ['dist'],
 		port: config.port,
 		base: config.devBaseUrl,
-		livereload: true
+		livereload: true,
+		middleware: function(connect, opt) {
+			return [
+			history({})
+			]
+		}
 	});
 });
 

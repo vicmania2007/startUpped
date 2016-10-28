@@ -1,11 +1,37 @@
 "use strict";
 
 var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
 
-var Home = React.createClass({
+
+var Landing = React.createClass({
     render: function() {
         return (
-            <div>
+            <div id="landingPage">
+                <div id="navBar" className="navbar">
+                    <nav>
+                    <div className="nav-wrapper">
+                        <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
+                        <ul className="right hide-on-med-and-down">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">FEATURES</a></li>
+                            <li><a href="#">SUBSCRIBE</a></li>
+                            <li><Link className="modal-trigger" to="register">SIGN UP</Link></li>
+                            <li><Link className="modal-trigger" to="login">LOGIN</Link></li>
+                        </ul>
+                        <ul className="side-nav" id="mobile-demo">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">FEATURES</a></li>
+                            <li><a href="#">SUBSCRIBE</a></li>
+                            <li><a href="#">SIGN UP</a></li>
+                            <li><a href="#">LOGIN</a></li>
+                            <li><a href="#"><i className="material-icons">keyboard_return</i></a></li>
+                        </ul>
+                    </div></nav></div>
+                <div id="content">
                 <section className="jumbotron-container" id="home">
                     <div className="container">
                         <div className="row">
@@ -109,7 +135,7 @@ var Home = React.createClass({
                                     <div className="col s12 l8">
                                         <div className="input-field">
                                             <input id="email" type="email" className="validate" />
-                                                <label for="email">Email ID</label>
+                                                <label htmlfor="email">Email ID</label>
                                         </div>
                                     </div>
                                     <div className="col s12 l4">
@@ -120,10 +146,20 @@ var Home = React.createClass({
                             </div>
                         </div>
                     </div>
-                </section>
+                </section></div>
+                <div id="footer">
+                <section className="footer-sec">
+                    <div className="container">
+                        <div className="row">
+                            <p className="copy-text1">Copyright © 2016 | All Rights Reserved | Startupped.io</p>
+                            <p className="copy-text2">Product of <b className="main-color"><i><a href="http://www.techparastat.com" target="_blank">TECHPARASTAT</a></i></b></p>
+                        </div>
+                    </div>
+                </section></div>
             </div>
+            
         );
     }
 });
 
-module.exports = Home;
+module.exports = Landing;

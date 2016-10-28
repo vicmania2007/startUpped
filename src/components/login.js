@@ -1,16 +1,19 @@
 "use strict";
 
 var React = require('react');
+var Router = require('react-router');
+var browserHistory = Router.browserHistory;
+var Redirect = Router.Redirect;
 var firebase = require('../third-party/Firebase');
 
 var Login = React.createClass({
+
    onLoginClick: function() {
-    alert('Hi');
     var email = 'vsubramanian90@gmail.com';
     var password = 'vickie123';
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(function(user) {
-      console.log(user);
+      browserHistory.push("/newuser");
     })
     .catch(function(error) {
       // Handle Errors here.
