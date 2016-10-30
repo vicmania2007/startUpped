@@ -3,62 +3,55 @@
 var React = require('react');
 var Router = require('react-router');
 var Link = Router.Link;
-
-var preloader = require('../third-party/custom')
+var Navbar = require('../components/navbar');
+var MaterialJS = require('../third-party/material');
+var preloader = require('../third-party/custom').preloader;
+var userName = "Vignesh - Aravind";
 
 var Dashboard = React.createClass({
+	componentWillMount: function() {
+        MaterialJS();
+    },
 	render: function() {
 		return (
-			<div id="dashboard">
-				<div className="se-pre-con"></div>
-		
-				<div className="navbar-fixed">
-	   				<nav>
-		        		<div className="nav-wrapper">
-				            <a href="#!" className="brand-logo"><img className="responsive-img" src="images/logo.png"/></a>
-				            <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
-				            <ul className="right hide-on-med-and-down">
-				                <li><a href="#"><i className="material-icons">search</i></a></li>
-				                <li><a href="#"><i className="material-icons">view_module</i></a></li>
-				                <li><a href="#"><i className="material-icons">refresh</i></a></li>
-				                <li><a href="#"><i className="material-icons">exit_to_app</i></a></li>
-				            </ul>
-				            <ul className="side-nav" id="mobile-demo">
-				                <li><a className="mob-primary-nav" href="#"><i className="material-icons">search</i>MENU 1</a></li>
-				                <li><a className="mob-primary-nav" href="#"><i className="material-icons">view_module</i>MENU 2</a></li>
-				                <li><a className="mob-primary-nav" href="#"><i className="material-icons">refresh</i>MENU 3</a></li>
-				                <li><a className="mob-primary-nav" href="#"><i className="material-icons">exit_to_app</i>MENU 4</a></li>
-				            </ul>
-		        		</div>
-	    			</nav></div>
+			<div id="dashboard" className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+					
+				<div className="se-pre-con"></div>	
 
-				<ul id="slide-out" className="side-nav fixed">
-	    			<li>
-		    			<div className="userView">
-				        	<img className="background" src="images/usrbkpic.jpg"/>
-				        	<img className="circle usrpropic" src="images/user.jpg"/>
-				        	<span className="name usrname">Arravind R</span>
-				        	<span className="email usremail">aravindram024@gmail.com</span>
-		   			 	</div>
-	   			 	</li>
-				    <li><a className="waves-effect waves-light sidebar-nav-fnt" href="#!"><i className="material-icons sidebar-nav-ico">dashboard</i>Dashboard</a></li>
-				    <li><a className="waves-effect waves-light sidebar-nav-fnt" href="#!"><i className="material-icons sidebar-nav-ico">lightbulb_outline</i>Ideation</a></li>
-				    <li><a className="waves-effect waves-light sidebar-nav-fnt" href="#!"><i className="material-icons sidebar-nav-ico">network_check</i>Validation</a></li>
-				    <li><a className="waves-effect waves-light sidebar-nav-fnt" href="#!"><i className="material-icons sidebar-nav-ico">art_track</i>Digitalization</a></li>
-				    <li><a className="waves-effect waves-light sidebar-nav-fnt" href="#!"><i className="material-icons sidebar-nav-ico">timeline</i>Analytics</a></li>
-				    <li><div className="divider"></div></li>
-				    <li><a className="waves-effect waves-light sidebar-nav-fnt" href="#!"><i className="material-icons sidebar-nav-ico">settings</i>Settings</a></li>
-				    <li><a className="waves-effect waves-light sidebar-nav-fnt" href="#!"><i className="material-icons sidebar-nav-ico">account_circle</i>My Account</a></li>
-				    <li><a className="waves-effect waves-light sidebar-nav-fnt" href="#!"><i className="material-icons sidebar-nav-ico">new_releases</i>Help</a></li></ul>
-				<a href="#" data-activates="slide-out" className="sidebar-nav-collapse"><i className="material-icons">view_compact</i></a>
-			</div>
+				<Navbar />
+
+      			<div className="mdl-layout__drawer">
+			        <header className="drawer-header user-section-sidebar">
+			          <img src="images/profile-pic.png" className="user-avatar"/>
+			          <div className="avatar-dropdown">
+			            <br />
+			            <span>{userName}</span>
+			            <button id="user-items" className="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+			              <i className="material-icons" role="presentation">arrow_drop_down</i>
+			              <span className="visuallyhidden">Accounts</span>
+			            </button>
+			            <ul className="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" htmlFor="user-items">
+			              <li className="mdl-menu__item">User Profile</li>
+			              <li className="mdl-menu__item">Account Settings</li>
+			              <li className="mdl-menu__item">Lock</li>
+			            </ul>
+			          </div>
+			        </header>
+			        <nav className="mdl-navigation">
+			          <a className="mdl-navigation__link sidebar-menu-items" href=""><i className="material-icons sidebar-db-icons">dashboard</i>&nbsp;&nbsp;dashboard</a>
+			          <a className="mdl-navigation__link sidebar-menu-items" href=""><i className="material-icons sidebar-db-icons">lightbulb_outline</i>&nbsp;&nbsp;ideation</a>
+			          <a className="mdl-navigation__link sidebar-menu-items" href=""><i className="material-icons sidebar-db-icons">network_check</i>&nbsp;&nbsp;validation</a>
+			          <a className="mdl-navigation__link sidebar-menu-items" href=""><i className="material-icons sidebar-db-icons">art_track</i>&nbsp;&nbsp;digitalization</a>
+			          <a className="mdl-navigation__link sidebar-menu-items" href=""><i className="material-icons sidebar-db-icons">timeline</i>&nbsp;&nbsp;analytics</a>
+			          <a className="mdl-navigation__link sidebar-menu-items" href=""><i className="material-icons sidebar-db-icons">new_releases</i>&nbsp;&nbsp;help</a>
+			        </nav>
+      			</div>
+  			</div>
 		);
 	},
 	componentDidMount: function() {
-		alert('before component is mounted');
 		preloader();
 	}
-
 });
 
 

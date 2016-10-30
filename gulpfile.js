@@ -27,6 +27,7 @@ var config = {
     		'./src/images/*.ico',
     		'./src/images/*.gif'
 		],
+		fonts: '/src/fonts/*.ttf',
 		dist: './dist',
 		mainJs: './src/main.js'
 	}
@@ -78,7 +79,12 @@ gulp.task('images', function() {
 
 	gulp.src(config.paths.images)
 		.pipe(gulp.dest(config.paths.dist + '/images'));
+});
 
+gulp.task('fonts', function() {
+
+	gulp.src(config.paths.fonts)
+		.pipe(gulp.dest(config.paths.dist + '/fonts'));
 });
 
 gulp.task('lint', function() {
@@ -89,7 +95,7 @@ gulp.task('lint', function() {
 
 gulp.task('watch', function() {
 	gulp.watch(config.paths.html, ['html']);
-	gulp.watch(config.paths.js, ['js', 'lint']);
+	gulp.watch(config.paths.js, ['js']);
 });
 
-gulp.task('default', ['html', 'js', 'images', 'css', 'lint', 'open', 'watch']);
+gulp.task('default', ['html', 'js', 'images', 'css', 'fonts', 'open', 'watch']);

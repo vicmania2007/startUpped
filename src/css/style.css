@@ -1,210 +1,211 @@
-@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
-/* Custom CSS for landing page */
-body{
+/**
+* Name: Startupped App
+* Version: 1.0.0
+* URL: www.startupped.io
+* Description: StartUpped - See your startup grow
+* Author: Techparastat Team
+* Author URL: www.techparastat.com
+*/
+/* General declarations */
+/* Including Fonts */
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Thin), url("fonts/roboto/Roboto-Thin.eot");
+    src: url("fonts/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("fonts/roboto/Roboto-Thin.woff") format("woff"), url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Light), url("fonts/roboto/Roboto-Light.eot");
+    src: url("fonts/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("fonts/roboto/Roboto-Light.woff2") format("woff2"), url("fonts/roboto/Roboto-Light.woff") format("woff"), url("fonts/roboto/Roboto-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Regular), url("fonts/roboto/Roboto-Regular.eot");
+    src: url("fonts/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("fonts/roboto/Roboto-Regular.woff") format("woff"), url("fonts/roboto/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/roboto/Roboto-Medium.eot");
+    src: url("fonts/roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("fonts/roboto/Roboto-Medium.woff") format("woff"), url("fonts/roboto/Roboto-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/roboto/Roboto-Bold.eot");
+    src: url("fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("fonts/roboto/Roboto-Bold.woff") format("woff"), url("fonts/roboto/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+/* General Styles */
+.theme-color{
+    color: #F2194E;
+}
+.mdl-cell {
+    padding: 5px;
+}
+.container-width{
+    max-width: 1450px;
+}
+a {
+    text-decoration: none;
+}
+html,body {
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.87);
     background-color: #EEEEEE;
 }
-.main-color{
-    color:#F2194E;
-}
-.new-section{
-    margin-top: 50px;
-    text-align: center;
-}
-/* Commonly used styles */
-.startupped-btn{
-    background-color: #F2194E;
-}
-.startupped-btn:hover{
-    background-color: #F2194E;
-}
-.startupped-btn-light{
-    font-size: 20px;
-    background-color: #FFFFFF;
-    color: #F2194E;
-}
-.startupped-btn-light:hover{
-    background-color: #FFFFFF;
-    color: #F2194E;
-}
-/* Horizontal Rule */
-hr {
-    margin: 0 0 60px 0;
-    position: relative;
-    border: 0;
-}
-hr.daga {
-    height: 2px;
-    background: #F2194E;
-}
-/* Preloader style */
-.no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-.se-pre-con {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: url(../images/preloader.gif) center no-repeat #fff;
-}
-/* Primary menu and logo styling */
-.navbar{
-    width: 100.6% !important;
-}
-nav {
-    color: #fff;
+/* Header */
+.primary-navbar{
     background-color: #ED005A;
-    width: 100%;
-    height: 65px;
+    margin-bottom: 2px;
 }
-.side-nav{
-    background-color: #BDBDBD;
+a.mdl-navigation__link:hover {
+    background-color: #d40050;
 }
-nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-    float: right !important;
-    margin-right: 10px;
+.res-logo{
+    width: 170px;
 }
-.mob-primary-nav{
-    margin: 10px;
+.responsive-img{
+    width: 90%;
+}
+.mdl-navigation__link{
+    font-weight: 500;
+    font-size: 15px;
+    color: #ffffff;
+    opacity: 1 !important;
+}
+.cen-align{
     text-align: center;
 }
-nav .brand-logo{
-    max-width: 150px;
+/* SCREEN 1 - CHAPTER SELECTION */
+/* CHOOSING CHAPTERS */
+.chapter-sec{
+    padding-top: 50px;
 }
-/* Hero Header */
-.jumbotron-container {
-    background-image: url(../images/heroimg2.jpg);
-    background-position: top;
-    background-position-x: center;
-    background-position-y: top;
-    background-attachment: fixed;
-    background-size: cover;
+.chapter-card{
+    margin-left: auto;
+    margin-right: auto;
+    width: 512px;
 }
-.hero-section-left{
-    margin-top: 50px;
-    margin-bottom: 80px;
+.have-idea-chapter > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../images/have-idea-chapter.png') center / cover;
 }
-.hero-section-right{
-    margin-top: 70px;
-    margin-bottom: 80px;
+.existing-startup-chapter > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../images/existing-startup-chapter.png') center / cover;
 }
-img.hero-startup-img {
-    width: 450px;
+.investor-chapter > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../images/investor-chapter.png') center / cover;
 }
-.hero-heading{
-    color:#FFFFFF;
-    font-size: 70px;
-    font-weight: 600;
+.no-idea-chapter > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../images/no-idea-chapter.png') center / cover;
 }
-.hero-content{
-    color: #FFFFFF;
-    font-size: 29px;
-    margin-top:-50px;
-    font-weight: 600;
-}
-/* About Us */
-.list-heading{
-    font-size: 20px;
-    font-weight: 500;
-    color:#ED005A;
-}
-.list-desc{
-    font-size: 17px;
-}
-/* Features */
-.feature-img{
-    margin-top: 30px;
-}
-.feature-heading{
-    text-align: left !important;
-    font-size: 35px;
-    font-weight: 500;
-}
-.feature-content{
-    text-align: left !important;
-    font-size: 20px;
-}
-/* Try */
-.try-sec{
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 25px;
-    background-color: #424242;
-}
-.try-heading{
-    color: #ffffff;
-    font-size: 40px;
-    font-weight: 500;
-}
-.try-content{
-    color: #ffffff;
+h2.mdl-card__title-text.card-title {
     font-size: 25px;
     font-weight: 500;
 }
-.try-sec-b {
-    color: #4FC3F7;
+.chapter-card-content{
+    color: rgba(0,0,0, 0.54);
+    font-size: 1.15rem;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 16px 16px;
+    width: 90%;
 }
-/* Subscribe */
-.subscribe-sec{
-    padding-top: 40px;
+/* SCREEN 2 - QUESTIONNAIRE */
+p.question-env-setting {
+    font-size: 15px;
 }
-.subscribe-container .input-field label {
-    color: #F2194E;;
+/* SCREEN 3 - GETTING BOX */
+/* Idea box */
+.idea-box-container{
+    background-color: #FFFFFF;
 }
-.subscribe-heading{
-    font-size: 20px;
-    color: #F2194E;
+.idea-content-box{
+    width: 100%;
 }
-.subscribe-content{
-    font-size: 20px;
+.next-btn, .next-btn:hover{
+    float: right;
+    background-color: #F2194E;
+    color: #FFFFFF;
 }
-input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{
-    border-bottom: 2px solid #F2194E !important;
+/* SCREEN 4 - DASHBOARD */
+.mdl-grid.explaining-security {
+    background-color: #ffffff;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 350px;
+    position: relative;
 }
-.sub-btn{
-    margin-top: 15px;
-}
-/* Footer */
-.footer-sec{
-    text-align: center;
-    padding-top: 10px;
-}
-.copy-text1{
+.privacy-statement{
     font-size: 18px;
+    text-align: left !important;
 }
-.copy-text2 a{
-    color:#F2194E !important;
+ul.privacy-points li{
+    font-size: 15px;
+    margin-top: 10px;
 }
-/* Modal Forms */
-.modal-footer-links{
+.privacy-foo-txt{
+    text-align: right;
+    font-weight: 600;
+}
+.agree-terms{
+    text-align: left;
+    font-weight: 600;
+}
+.finish-btn, .finish-btn:hover{
     float: right;
-    margin-top: 15px;
-}
-.registerform h4, .loginform h4{
-    font-size: 35px;
-    text-align: center;
-    color: #F2194E;
-    font-weight: 500;
-}
-.registerform h6, .loginform h6 {
-    text-align: center;
-}
-.modal-btn{
     background-color: #F2194E;
-    float: right;
-    margin-top: -5px;
+    color: #FFFFFF;
 }
-.modal-btn:hover{
-    background-color: #F2194E;
+/* SCREEN 5 - DASHBOARD */
+/* Sidebar */
+.mdl-layout__drawer{
+    background-color: #616161;
+    color: #FFFFFF;
 }
-/* 1. Register Form */
-div#register-modal {
-    opacity: 0.96 !important;
-    width: 45%;
+a.mdl-navigation__link {
+    text-transform: capitalize;
+    color: #FFFFFF !important;
+    font-size: 20px !important;
 }
-/* 2. Login Form */
-div#login-modal {
-    opacity: 0.96 !important;
-    width: 35%;
+.sidebar-menu-items{
+    height: 40px !important;
+    line-height: 40px !important;
+}
+a.sidebar-menu-items:hover {
+    background-color: #333 !important;
+}
+.user-section-sidebar{
+    align-self: center;
+}
+.user-avatar{
+    margin-top: 10px;
+    width: 140px;
+}
+/* Media Queries */
+/* General media queries */
+@media only screen and (max-width: 650px){
+    .disable-650px-devices{
+        display: none !important;
+    }
+    .mob-logo{
+        margin-left: 25% !important;
+    }
+}
+@media only screen and (min-width: 655px){
+    .mdl-layout__header .mdl-layout__drawer-button{
+        display: none !important;
+    }
 }
